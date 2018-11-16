@@ -39,3 +39,11 @@ export default function cheeseReducer(state = initialState, action) {
 
   return state;
 }
+
+// Selectors
+
+export const selectors = {
+  getCheeses: state => state.cheeses,
+  getError: state => state.error,
+  getLoading: state => state.loading,
+};
