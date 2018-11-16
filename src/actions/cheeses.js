@@ -22,7 +22,7 @@ const fetchCheesesError = error => ({
 // eslint-disable-next-line import/prefer-default-export
 export const fetchCheeses = () => (dispatch) => {
   dispatch(fetchCheesesRequest());
-  return fetch(API_BASE_URL)
+  return fetch(`${API_BASE_URL}/api/cheeses`)
     .then((res) => {
       if (!res.ok) {
         const contentType = res.headers.get('content-type');
